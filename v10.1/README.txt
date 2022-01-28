@@ -12,9 +12,10 @@ python interface.
 -Python 3x must be installed.
 -The libraries required are: matplotlib, numpy, pandas, bokeh, tkinter, os and sys.
 -The program was made for windows interfaces. To execute correctly in Linux and MacOs, lines
-using bokeh, os and sys libraries must be updated.
+using bokeh, os and sys libraries must be updated. Change \\ to //.
 
 ---NOTE---
+
 -To execute the program you may run interface.pyw (if not open try with Powershell or CMD).
 -The alteration of the filenames of .py and the assets path may alter the funcionality of
 the simulator
