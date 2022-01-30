@@ -17,7 +17,7 @@ using bokeh, os and sys libraries must be updated.
 ---NOTE---
 -To execute the program you may run interface.pyw (if not open try with Powershell or CMD).
 -The alteration of the filenames of .py and the assets path may alter the funcionality of
-the simulator
+the simulator.
 -It is highly recommended to use known values to avoid colisions between systems. (An update
 of collisions is in progress but the time of release is not certain).
 -Some parts of the code sintaxis in declaration of variables are in spanish, an english
