@@ -303,7 +303,7 @@ class config():
             ['Real ex time per sec','It expresses how much time of simulation is going to be represented \n as a second in real time. \n 60*60*24 is the default.'],
             ['Integral sums interval', 'It expresses the time of simulation that passes between an update of data. \n 60*10 seconds is the default.'],
             ['Total simulation time', 'It expresses the total time that passes in a simulation. \n 60*60*24*365*2 seconds is the default.'],
-            ['Iterations per second', 'It expresses the speed of update of the simulation per seconds. \n 20 i/s is the default and the min value accepted.'],
+            ['Iterations per second', 'It expresses the speed of update of the simulation per seconds. \n 20 i/s is the default and the max value accepted.'],
             ['Interval length', 'It expresses how many iterations are going to be shown at the same time. \n  500 is the default, the interval is 1 <= x <= 1000.'],
             ['Conversions', 'To see the conversion operators go to \'?\' \n in the section of \'converter\'.'],
             ['Note', 'The user can use conversion operators directly \n inside the main fields.'],
