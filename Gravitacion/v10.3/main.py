@@ -50,7 +50,7 @@ def main():
     list_xs = [[] for n in range(len(dfl))]
     list_ys = [[] for n in range(len(dfl))]
     
-    musca = time.time()
+
     while t < tts:
         ac = a.copy()
         
@@ -63,9 +63,7 @@ def main():
         
         t += dt
     
-    misca = time.time()
-    mickeymouse = misca-musca
-    print(mickeymouse)
+
     print(len(list_ys[0]))
 
     list_g= [[list_xs[n],list_ys[n]] for n in range(len(list_xs))]
