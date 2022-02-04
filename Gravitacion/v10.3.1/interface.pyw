@@ -6,7 +6,7 @@ Created on Mon Nov  8 19:50:20 2021
 
 Title: Interfaz tkinter Gravitación sim
 
-ver: 2.5
+ver: 2.6
 """
 
 #For MacOs change \\ to //
@@ -491,22 +491,20 @@ class main():
                     ad(self,'No data', 'There must be at least \n 2 objects to graph')
             else:
                 ad(self,'Not found', 'There is not last data source')
-        def save():
+        def save(self):
             if not empty(self.list_entry):
-                locname = calc(self,self.name.get())
+                locname = str(calc(self,self.name.get()))
                 if  locname in self.list_index:
                     self.list_val.pop(self.list_index.index(locname))
                     self.list_index.pop(self.list_index.index(locname))  
-                    
                 updatelist = []
-                
                 for n in self.list_entry[1::]:
                     updatelist.append(calc(self,n.get()))
                 if not None in updatelist:
                     for n,u in enumerate([locname] + updatelist):
                             self.list_entry[n].delete(0, 'end')
                             self.list_entry[n].insert(0, u)
-                    self.list_val.append(list(v for v in [locname] + updatelist))
+                    self.list_val.append(list(v for v in [float(locname)] + updatelist))
                     self.list_index.append(locname)
                     order(self)
                     ad(self,'Saved', f'"{locname}" saved correctly')
@@ -520,7 +518,7 @@ class main():
                 self.list_val = df
                 self.list_index = []
                 for el in self.list_val:
-                    self.list_index.append(el[0])
+                    self.list_index.append(str(el[0]))
                 ad(self,'Data loaded', 'The last data source has been set \n as current.')
             else:
                 ad(self,'Not found', 'There is not last data source')
@@ -533,6 +531,22 @@ class main():
                 ad(self, 'Deleted', f'The data of "{locname}" has been deleted')
             else:
                 ad(self, 'Not found', f'The name "{locname}" does not exist')
+                
+        def current():
+            loc = self.name.get()
+            if 'l' in loc:
+                loc = loc.split('l')
+                if len(loc) == 2:
+                    loc = loc[1]
+                    if loc in self.list_index:
+                        loc2 = self.list_val[self.list_index.index(loc)]
+                        for n,e in enumerate(self.list_entry):
+                            e.delete(0,"end")
+                            e.insert(0,loc2[n])
+                    else:
+                        ad(self, 'Not found', f'The name "{loc}" does not exist')
+            else:
+                show(self, list_a = self.list_val)
         
         self.b1 = tk.Button(self.a2, text = 'Run', width=6,padx=5,pady=0, command = lambda: run())
         self.b1.grid(row=0, column = 4, sticky = 'E',padx=5, pady=5)
@@ -564,7 +578,7 @@ class main():
         self.b10 = tk.Button(self.a3, text = 'Load last', width=6, padx=5, pady=0, command = lambda: loadlast())
         self.b10.grid(row=0, column=4,padx=5, pady=5)
         
-        self.b11 = tk.Button(self.a2, text = 'Current', width=6, padx=5, pady=0, command = lambda: show(self, list_a = self.list_val))
+        self.b11 = tk.Button(self.a2, text = 'Current', width=6, padx=5, pady=0, command = lambda: current())
         self.b11.grid(row=0, column=3,padx=5, pady=5)
         self.root.mainloop()
 
