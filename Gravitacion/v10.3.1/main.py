@@ -52,7 +52,6 @@ def main():
     list_xs = [[] for n in range(len(dfl))]
     list_ys = [[] for n in range(len(dfl))]
     
-    musca = time.time()
     while t < tts:
         ac = a.copy()
         for n,el in enumerate(a):
@@ -61,35 +60,18 @@ def main():
             el.append(a[n][3])
             list_ys[n].append(a[n][4])
         t += dt
-    
-    misca = time.time()
-    mickeymouse = misca-musca
-    print('main time:', mickeymouse)
+
 
     list_g= [[list_xs[n],list_ys[n]] for n in range(len(list_xs))]
     
-    musca = time.time()
 
     list_i = list(map(lambda x: int(x),rel * np.arange(0,itf,1)))
     list_f = list(map(lambda x: [list(map(lambda y: x[0][y], list_i)),list(map(lambda y: x[1][y], list_i))], list_g))
-    
-    misca = time.time()
-    mickeymouse = misca-musca
-    print('reduct time:', mickeymouse)
-    
-    musca = time.time()
+
     for el in list_f:
         plt.plot(el[0],el[1])
-    
-    misca = time.time()
     plt.show()
     
-    
-    mickeymouse = misca-musca
-    print('plot time:', mickeymouse)
-
-
-    print('total time:', misca-itime)
     return {
         'xs': [list_f[n][0] for n, el in enumerate(list_f)],
         'ys': [list_f[n][1] for n, el in enumerate(list_f)]
