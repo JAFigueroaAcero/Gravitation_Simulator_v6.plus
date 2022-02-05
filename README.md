@@ -9,3 +9,4 @@ Note of versions:
 - v10.1 is the first with all the information of functions and variables in english.
 - v10.2 general bug fix
 - v10.3 delete bug fixed, new convertor algorithm that allows variables, all operators and jerarquization.
+- v10.3.2 Suports multiple data bases with specific paths.
