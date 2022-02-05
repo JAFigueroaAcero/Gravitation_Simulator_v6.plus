@@ -13,20 +13,12 @@ ver: 2.6
 #double backslash to double slash
 
 
-import tkinter as tk
-import pandas as pd
-import myapp as m
 from os.path import isfile
-from tkinter import Tk
-from tkinter import ttk
-
-
-defaultconfigs = [60*60*24,60*10,60*60*24*365*2,20,500]
-
+import pandas as pd
 
 def proute(pr):
     global path
-    df = pd.DataFrame([pr], columns = [path])
+    df = pd.DataFrame([pr], columns = ['path'])
     df.to_csv('assets//path.csv', index=False)
     path = pr
 
@@ -36,6 +28,16 @@ if isfile('assets//path.csv'):
         path = dfl[0]
 else:    
         proute('assets//data.csv')
+
+
+import tkinter as tk
+import myapp as m
+
+from tkinter import Tk
+from tkinter import ttk
+
+
+defaultconfigs = [60*60*24,60*10,60*60*24*365*2,20,500]
 
 
 def order(parent):
