@@ -1,4 +1,4 @@
-# Gravitation_Simulator
+# Gravitation_Simulator_v6.plus
 
 Note of versions:
 - To be able to download older versions go to ['Gravitation_Simulator_Old_Versions'](https://github.com/JAFigueroaAcero/Gravitation_Simulator_Old_Versions "Gravitation_Simulator_Old_Versions") repository.
