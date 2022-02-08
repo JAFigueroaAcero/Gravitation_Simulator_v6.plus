@@ -10,3 +10,8 @@ Note of versions:
 - v10.2 general bug fix
 - v10.3 delete bug fixed, new convertor algorithm that allows variables, all operators and jerarquization.
 - v10.3.2 Suports multiple data bases with specific paths.
+- v10.3.2 Added load data to fields.
+- v10.4 Saves the data of the simulations ran in a specific data base to be able to re-run simulations faster.
+- v10.4 Added delete all current data.
+
+For more information about every version particular updates see '?' option inside interface.pyw in every tab.
