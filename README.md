@@ -16,5 +16,6 @@ Note of versions:
 - v8.4.0 Saves the data of the simulations ran in a specific data base to be able to re-run simulations faster.
 - v8.4.0 Added delete all current data.
 
-
-For more information about every version particular updates see '?' option inside interface.pyw in every tab.
+Notes:
+- For more information about every version particular updates see '?' option inside interface.pyw in every tab.
+- Some versions might have data loaded, user might delete assets//data.csv to be able to use versions without data.
