@@ -1,7 +1,9 @@
 # Gravitation_Simulator_v6.plus
 
 To be able to download older versions go to ['Gravitation_Simulator_Old_Versions'](https://github.com/JAFigueroaAcero/Gravitation_Simulator_Old_Versions "Gravitation_Simulator_Old_Versions") repository.
-To be able to download the newest version go to ['Gravitation_Simulator'](https://github.com/JAFigueroaAcero/Gravitation_Simulator "Gravitation_Simulator")
+
+To be able to download the newest version go to ['Gravitation_Simulator'](https://github.com/JAFigueroaAcero/Gravitation_Simulator "Gravitation_Simulator") repository.
+
 Note of versions:
 - v6.0.0 is the first with a functional interface.
 - v7.0.0 is the first with an interface with modification of the complete Data Base.
