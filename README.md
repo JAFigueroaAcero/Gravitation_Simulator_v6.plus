@@ -1,4 +1,4 @@
-# Simulador_Gravitacion
+# Gravitation_Simulator
 
 
 Note of versions:
