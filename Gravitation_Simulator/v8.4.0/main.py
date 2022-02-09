@@ -94,8 +94,6 @@ def main():
     for n, el in enumerate(list_f):
         df = pd.DataFrame([el[0],el[1]])
         df.to_csv(f'{pathprov}//{dfvl[n][0]}.csv', index=False)
-    #Crear folder con path... cambiando // o \\ por -
-    # sub archivos: configs, obj1, obj2, ..., objn
     
     return {
         'xs': [list_f[n][0] for n, el in enumerate(list_f)],
