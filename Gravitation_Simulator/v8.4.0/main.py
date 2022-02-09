@@ -85,6 +85,10 @@ def main():
         pass
     df = pd.DataFrame([pd.read_csv('assets//configs.csv').values.tolist()[0]], columns = ['rtps','dt','tst','ips', 'il'])
     df.to_csv(f'{pathprov}//configs.csv', index=False)
+    
+    df = pd.DataFrame(pd.read_csv(path).values.tolist(), columns = ['Name','mass','radio','x','y','vel','prad'])
+    df.to_csv(f'{pathprov}//data.csv', index=False)
+    
     dfv = pd.read_csv(path)
     dfvl = dfv.values.tolist()
     for n, el in enumerate(list_f):
