@@ -6,7 +6,7 @@ Created on Sun Nov 21 18:17:21 2021
 
 Title: Gravitación sim
 
-ver: 8.4
+ver: 8.5
 """
 
 import functions as f
@@ -16,10 +16,12 @@ import matplotlib.pyplot as plt
 import time
 from os import mkdir
 from shutil import rmtree
-
+import os.path
 
 def main():
-    df = pd.read_csv('assets//path.csv')
+    df = pd.read_csv(os.path.join('assets', 'path.csv')
+
+)
     dfl = df.values.tolist()[0]
     path = dfl[0]
     itime = time.time()
@@ -85,16 +87,15 @@ def main():
         pass
     df = pd.DataFrame([pd.read_csv('assets//configs.csv').values.tolist()[0]], columns = ['rtps','dt','tst','ips', 'il'])
     df.to_csv(f'{pathprov}//configs.csv', index=False)
-
+    
     df = pd.DataFrame(pd.read_csv(path).values.tolist(), columns = ['Name','mass','radio','x','y','vel','prad'])
     df.to_csv(f'{pathprov}//data.csv', index=False)
-
+    
     dfv = pd.read_csv(path)
     dfvl = dfv.values.tolist()
     for n, el in enumerate(list_f):
         df = pd.DataFrame([el[0],el[1]])
         df.to_csv(f'{pathprov}//{dfvl[n][0]}.csv', index=False)
-
     
     return {
         'xs': [list_f[n][0] for n, el in enumerate(list_f)],

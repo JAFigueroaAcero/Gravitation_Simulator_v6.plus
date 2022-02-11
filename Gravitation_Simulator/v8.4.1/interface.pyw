@@ -9,25 +9,26 @@ Title: Interfaz tkinter Gravitación sim
 ver: 2.7
 """
 
-#For MacOs change \\ to //
-#double backslash to double slash
+
 
 from os.path import isfile, isdir
-from numpy import character
 import pandas as pd
+import os.path
 
 def proute(pr):
     global path
     df = pd.DataFrame([pr], columns = ['path'])
-    df.to_csv('assets//path.csv', index=False)
+    df.to_csv(os.path.join('assets', 'path.csv'), index=False)
     path = pr
 
-if isfile('assets//path.csv'):
-        df = pd.read_csv('assets//path.csv')
+if isfile(os.path.join('assets', 'path.csv')):
+        df = pd.read_csv(os.path.join('assets', 'path.csv')
+
+)
         dfl = df.values.tolist()[0]
         path = dfl[0]
 else:    
-        proute('assets//data.csv')
+        proute(os.path.join('assets', 'data.csv'))
 
 
 import tkinter as tk
@@ -38,6 +39,7 @@ from tkinter import ttk
 
 
 defaultconfigs = [60*60*24,60*10,60*60*24*365*2,20,500]
+
 
 
 
