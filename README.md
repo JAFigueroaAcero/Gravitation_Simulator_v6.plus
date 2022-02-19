@@ -15,6 +15,9 @@ Note of versions:
 - v8.3.2 Added load data to fields.
 - v8.4.0 Saves the data of the simulations ran in a specific data base to be able to re-run simulations faster.
 - v8.4.0 Added delete all current data.
+- v9.0.0 Added modification of moving graphs, select display.
+- v9.0.0 Added folder with graphs if user selects Save Graphs.
+- v9.0.0 Saves of and specific set of the data base selected to be able to use and re-run simulations.
 
 Notes:
 - For more information about every version particular updates see '?' option inside interface.pyw in every tab.
