@@ -19,7 +19,7 @@ Note of versions:
 - v9.0.0 Added folder with graphs if user selects Save Graphs.
 - v9.0.0 Saves of and specific set of the data base selected to be able to use and re-run simulations.
 - v9.1.0 Fix path used in Ubuntu and optimize main file
-
+- v9.1.1 Added modifitation of dpi of saved graphs and fix deformations and cuts in graphs
 Notes:
 - For more information about every version particular updates see '?' option inside interface.pyw in every tab.
 - Some versions might have data loaded, user might delete assets/data.csv to be able to use versions without data.
